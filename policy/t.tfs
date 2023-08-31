@@ -1,0 +1,317 @@
+{
+  "version": 4,
+  "terraform_version": "1.4.6",
+  "serial": 39,
+  "lineage": "afc116bd-da33-2200-3aba-790976884485",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "prismacloud_compliance_standard",
+      "name": "CS_PANW",
+      "provider": "provider[\"registry.terraform.io/paloaltonetworks/prismacloud\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "cloud_types": [
+              "aws"
+            ],
+            "created_by": "cloud-geek",
+            "created_on": 1693421977554,
+            "cs_id": "a94b9d7e-727e-4e17-8da9-3a30a572dabf",
+            "description": "Compliance Standards PANW",
+            "id": "a94b9d7e-727e-4e17-8da9-3a30a572dabf",
+            "last_modified_by": "cloud-geek",
+            "last_modified_on": 1693421977554,
+            "name": "PANW-terraform",
+            "policies_assigned_count": 1,
+            "system_default": false
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "prismacloud_compliance_standard_requirement",
+      "name": "CSR_PANW_TEAM1",
+      "provider": "provider[\"registry.terraform.io/paloaltonetworks/prismacloud\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "created_by": "cloud-geek",
+            "created_on": 1693422237197,
+            "cs_id": "a94b9d7e-727e-4e17-8da9-3a30a572dabf",
+            "csr_id": "77f25da8-d5ed-4b55-91c0-824ce1b4d0e6",
+            "description": "PANW Building Blocks",
+            "id": "a94b9d7e-727e-4e17-8da9-3a30a572dabf:77f25da8-d5ed-4b55-91c0-824ce1b4d0e6",
+            "last_modified_by": "cloud-geek",
+            "last_modified_on": 1693422237197,
+            "name": "PANW - Building Blocks",
+            "policies_assigned_count": 1,
+            "requirement_id": "PANW Building Blocks",
+            "standard_name": "",
+            "system_default": false,
+            "view_order": 1
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "prismacloud_compliance_standard.CS_PANW"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "prismacloud_compliance_standard_requirement_section",
+      "name": "CSRS_PANW_TEAM1_EC2",
+      "provider": "provider[\"registry.terraform.io/paloaltonetworks/prismacloud\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "associated_policy_ids": [
+              "bdc1b89e-720c-4645-b2aa-53e06ec5f862"
+            ],
+            "created_by": "cloud-geek",
+            "created_on": 1693422454432,
+            "csr_id": "77f25da8-d5ed-4b55-91c0-824ce1b4d0e6",
+            "csrs_id": "f6b4473b-1e5d-44bd-b1cb-7f9de1527665",
+            "description": "Requirement Section for EC2",
+            "id": "77f25da8-d5ed-4b55-91c0-824ce1b4d0e6:f6b4473b-1e5d-44bd-b1cb-7f9de1527665",
+            "label": "",
+            "last_modified_by": "cloud-geek",
+            "last_modified_on": 1693422454432,
+            "policies_assigned_count": 1,
+            "requirement_name": "PANW - Building Blocks",
+            "section_id": "EC2",
+            "standard_name": "PANW-terraform",
+            "system_default": false,
+            "view_order": 1
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "prismacloud_compliance_standard.CS_PANW",
+            "prismacloud_compliance_standard_requirement.CSR_PANW_TEAM1"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "prismacloud_policy",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/paloaltonetworks/prismacloud\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "cloud_type": "aws",
+            "compliance_metadata": [
+              {
+                "compliance_id": "54dbfe71-4236-4aff-9eaa-1fc5ff3bf2f1",
+                "custom_assigned": false,
+                "policy_id": "",
+                "requirement_description": "",
+                "requirement_id": "",
+                "requirement_name": "",
+                "section_description": "",
+                "section_id": "",
+                "section_label": "",
+                "standard_description": "",
+                "standard_name": ""
+              }
+            ],
+            "created_by": "cloud-geek",
+            "created_on": 1693423025763,
+            "deleted": false,
+            "description": "created via terraform",
+            "enabled": true,
+            "id": "bdc1b89e-720c-4645-b2aa-53e06ec5f862",
+            "labels": [],
+            "last_modified_by": "cloud-geek",
+            "last_modified_on": 1693423066737,
+            "name": "panw-policy-terraform",
+            "open_alerts_count": 0,
+            "overridden": false,
+            "owner": "SESandBox",
+            "policy_category": "risk",
+            "policy_class": "exposure",
+            "policy_id": "bdc1b89e-720c-4645-b2aa-53e06ec5f862",
+            "policy_mode": "custom",
+            "policy_subtypes": [
+              "run"
+            ],
+            "policy_type": "config",
+            "recommendation": "created via terraform",
+            "remediable": false,
+            "remediation": [],
+            "restrict_alert_dismissal": false,
+            "rule": [
+              {
+                "api_name": "",
+                "children": [],
+                "cloud_account": "",
+                "cloud_type": "",
+                "criteria": "a4f06e2b-afe5-4c37-87c9-a9e146216b3e",
+                "data_criteria": [],
+                "name": "panw-policy-terraform",
+                "parameters": {
+                  "savedSearch": "true",
+                  "withIac": "false"
+                },
+                "resource_id_path": "",
+                "resource_type": "",
+                "rule_type": "Config"
+              }
+            ],
+            "rule_last_modified_on": 1693423066737,
+            "severity": "medium",
+            "system_default": false,
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjYwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "prismacloud_saved_search.example"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "prismacloud_rql_search",
+      "name": "x",
+      "provider": "provider[\"registry.terraform.io/paloaltonetworks/prismacloud\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "cloud_type": "",
+            "config_data": [
+              {
+                "name": "GM-Test-8-30-23",
+                "state_id": "7a4e4e630e293f0d7c8beefb173e2da12c3eb65b",
+                "url": ""
+              },
+              {
+                "name": "jneytchev-keypair",
+                "state_id": "eaba5b082901e35db9c5ee0213d230402db4b9af",
+                "url": ""
+              },
+              {
+                "name": "for-pc-test-ec2",
+                "state_id": "ede2956500e79c156220357539171a7e25175493",
+                "url": ""
+              },
+              {
+                "name": "jneytchev-keypair",
+                "state_id": "807efa05827f464078e564d963549c6150eaddec",
+                "url": ""
+              },
+              {
+                "name": "jneytchev-keypair",
+                "state_id": "d1af1c8d2ecf8128eae94846e856c3f22e747255",
+                "url": ""
+              },
+              {
+                "name": "jneytchev-keypair",
+                "state_id": "2ce1b1de4e9a74d880c56e9973530489c6444259",
+                "url": ""
+              },
+              {
+                "name": "integrations-virginiaRegion",
+                "state_id": "944f530deb31887bb786f0d11600559813a387fb",
+                "url": ""
+              },
+              {
+                "name": "MyKaliKeypair",
+                "state_id": "34090ea3bb44ffa23988daa22a84bf2eb8074acc",
+                "url": ""
+              },
+              {
+                "name": "My2022KP",
+                "state_id": "042d12c19373d45c53699883ca59bc93480eee80",
+                "url": ""
+              },
+              {
+                "name": "MyUSEast1KP",
+                "state_id": "e284119063d49f42a11144b582cb3dfe22e7003c",
+                "url": ""
+              }
+            ],
+            "description": "created via terraform",
+            "event_data": [],
+            "group_by": [],
+            "iam_data": [],
+            "id": "Y29uZmlnCmNvbmZpZyBmcm9tIGNsb3VkLnJlc291cmNlIHdoZXJlIGFwaS5uYW1lID0gJ2F3cy1lYzIta2V5LXBhaXInIEFORCBqc29uLnJ1bGUgPSBrZXlOYW1lIGV4aXN0cwphNGYwNmUyYi1hZmU1LTRjMzctODdjOS1hOWUxNDYyMTZiM2U=",
+            "limit": 10,
+            "name": "panw-policy-terraform",
+            "network_data": [],
+            "query": "config from cloud.resource where api.name = 'aws-ec2-key-pair' AND json.rule = keyName exists",
+            "saved": null,
+            "search_id": "a4f06e2b-afe5-4c37-87c9-a9e146216b3e",
+            "search_type": "config",
+            "skip_result": null,
+            "time_range": [
+              {
+                "absolute": [],
+                "relative": [
+                  {
+                    "amount": 24,
+                    "unit": "hour"
+                  }
+                ],
+                "to_now": []
+              }
+            ]
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "prismacloud_saved_search",
+      "name": "example",
+      "provider": "provider[\"registry.terraform.io/paloaltonetworks/prismacloud\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "description": "created via terraform",
+            "id": "a4f06e2b-afe5-4c37-87c9-a9e146216b3e",
+            "name": "panw-policy-terraform",
+            "query": "config from cloud.resource where api.name = 'aws-ec2-key-pair' AND json.rule = keyName exists",
+            "saved": true,
+            "search_id": "a4f06e2b-afe5-4c37-87c9-a9e146216b3e",
+            "time_range": [
+              {
+                "absolute": [],
+                "relative": [
+                  {
+                    "amount": 24,
+                    "unit": "hour"
+                  }
+                ],
+                "to_now": []
+              }
+            ]
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "prismacloud_rql_search.x"
+          ]
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}
